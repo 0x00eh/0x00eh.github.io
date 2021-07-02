@@ -10,9 +10,9 @@ about inspect</p>
 In this challenge May be there is XSS vulnerability but here I I injects some scripts
 but it won’t woks for the flags.
   </br>
-  ```
+  <code>
 <SRC=# onmouseover="alert('theblackthreat welcome you.')">
-  ```
+  </code>
   </br>
 but it didn’t work so I look around to the source file and I found something intersting.
 the function for button tag where we can inject our script.
@@ -20,7 +20,7 @@ the function for button tag where we can inject our script.
 Page source http://164.52.211.11:9001/javas.js
   </br>
   
-```
+<code>
 var secretCode = "X01lZWVffQ==";
 
 document.getElementsByTagName('button').onclick=function() {
@@ -29,11 +29,11 @@ click();
 function click() {
 document.getElementById("he").innerHTML = "You Can't find me...";
 }
-```
+</code>
 </br>
 <img src="2.jpg">
      </br>
-So the secretCode is X01lZWVffQ==
+So the secretCode is <code>X01lZWVffQ==</code>
 </br>
 It will looks like base64 so i decode it I got the flag
 </br>
