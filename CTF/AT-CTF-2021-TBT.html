@@ -3,18 +3,26 @@
 <title> TheBlackthreat</title>
 
 <h3>Inspect_me: http://164.52.211.11:9001/<h3>
-<p><b>Enumeration:</b> Ths this challenge as the name says that inspect me. and is something
+<b>Enumeration:</b><p> Ths this challenge as the name says that inspect me. and is something
 about inspect</p>
 
-
+  </br>
 In this challenge May be there is XSS vulnerability but here I I injects some scripts
 but it won’t woks for the flags.
+  </br>
+  ```
 <IMG SRC=# onmouseover="alert('Flag')">
+  ```
+  </br>
 but it didn’t work so I look around to the source file and I found something intersting.
 the function for button tag where we can inject our script.
+  </br>
 Page source http://164.52.211.11:9001/javas.js
+  </br>
+  
 ```
 var secretCode = "X01lZWVffQ==";
+
 document.getElementsByTagName('button').onclick=function() {
 click();
 }
@@ -22,11 +30,17 @@ function click() {
 document.getElementById("he").innerHTML = "You Can't find me...";
 }
 ```
+</br>
 <img src=main/uploads/2.
+     </br>
 So the secretCode is X01lZWVffQ==
+</br>
 It will looks like base64 so i decode it I got the flag
+</br>
 seems that the name is the flag.
-Result Flag:
-AbhedyaCTF{_Meee_}}
+</br>
+<b>Result Flag: </b>
+</br>
+<u>AbhedyaCTF{_Meee_}}</u>
 </body>
 </html>
