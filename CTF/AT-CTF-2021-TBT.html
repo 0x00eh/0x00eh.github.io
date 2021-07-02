@@ -65,6 +65,7 @@ Step 1: First I open the file on Ghidra to know how it works.
 </br>
 <pre>
 Here i see that the code that is asking for:
+<code>
 ```
 undefined8 main(void)
 {
@@ -98,6 +99,7 @@ printf("wrong key, try again");
 return 0;
 }
 ```
+</code>
 </pre>
 </br>
 </br>
@@ -111,6 +113,7 @@ The linux tool stings is so usefull to extract the infromation
 </br>
 <img src="4.jpg">
 
+<code>
 ```
 $ string ./a.out
 strings ./a.out
@@ -133,16 +136,68 @@ TF{reverH
 sing_is_H
 cool
 ```
+</code>
 here is the
 Flag: AbhedyaCTF{reversing_is_cool}
 </pre>
+</br>
+</br>
+******************************************************************************************************************************************************************
+</br>
+</br>
+******************************************************************************************************************************************************************
+</br>
+</br>
+<pre>
+2. Decrypt Language:
+https://drive.google.com/file/d/******************************/view?usp=sharing
 
+In this chellenge I got a python script that supports the 3 version of pyhton so it is one kind of a algorithm that 
+can decode the number so string
+of order n ords= [73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
+<code>
+```
+import sys
+if sys.version_info.major == 2:
+print("You are running Python 2, which is no longer supported. Please update to
+Python 3.")
+ords = [73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
+print("".join(chr(o ^ 0xn) for o in ords))
+```
+</code>
+I need to change the code because there is no order of n specified but the strings can
+major of n=32
+Modified code
+<code>
+```
+import sys
+if sys.version_info.major == 2:
+print("You are running Python 2, which is no longer supported. Please update to
+Python 3.")
+ords = [73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
 
+print("".join(chr(o ^ 0x32) for o in ords))
+</code>
 
+Again run the script using python3
+<code>
+```
+$python3 Rev\ -2-find_n.py
+{z3n_0f_pyth0n}
+```
+</code>
+<img src="5.jpg">
 
-
-
-
+Result : Flag:
+AbhedyaCTF{z3n_0f_pyth0n}
+</br>
+</br>
+******************************************************************************************************************************************************************
+</br>
+</br>
+******************************************************************************************************************************************************************
+</br>
+</br>
 
 
 
