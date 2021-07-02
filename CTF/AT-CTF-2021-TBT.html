@@ -47,7 +47,6 @@ seems that the name is the flag.
 
 ******************************************************************************************************************************************************************
 </br>
-</br>
 ******************************************************************************************************************************************************************
 </br>
 </br>
@@ -144,7 +143,6 @@ Flag: AbhedyaCTF{reversing_is_cool}
 </br>
 ******************************************************************************************************************************************************************
 </br>
-</br>
 ******************************************************************************************************************************************************************
 </br>
 </br>
@@ -194,12 +192,84 @@ AbhedyaCTF{z3n_0f_pyth0n}
 </br>
 ******************************************************************************************************************************************************************
 </br>
+******************************************************************************************************************************************************************
+</br>
+</br>
+<h3>Forensics:</h3>
+<pre>
+1. Harry Potter
+https://drive.google.com/file/d/**************************/view?usp=sharing
+Methodology : In this challenge the music has have some encoded massage and I have
+to find it so I use the stings tool on linux and I found some information about that
+image.
+<code>
+```
+$ strings harry-potter-ringtone\ \(1\).wav
+RIFF
+WAVEfmt
+LIST
+INFOIART
+www.ringtonedownload.best
+ICMT
+www.ringtonedownload.best
+IGNR
+www.ringtonedownload.best
+IPRD
+www.ringtonedownload.best
+ISFT
+```
+</code>
+Basic details of the ringtone.
+File name: harry-potter-ringtone.mp3
+File type: audio/mpeg
+File size: 752 KB
+Length: 32 seconds
+Bitrate: 192kb/s CBR
+I need to decrypt the audio file so a little bit google search helped me to do this
+I found Steganographic Decoder
+<img src="6.jpg">
+https://futureboy.us/stegano/decinput.html
+<b>Result: Flag: AbhedyaCTF{Stegnography_is_tricky!}</b>
+</pre>
+</br>
+</br>
+******************************************************************************************************************************************************************
 </br>
 ******************************************************************************************************************************************************************
 </br>
 </br>
-
-
-
+<pre>
+2. Don’t think for a second this is some cute Lil puppy. He took off with some
+important note, can
+you catch him to retrieve the important note?
+https://drive.google.com/file/d/******************************/view?usp=sharing
+<img src="7.jpg"/>
+This lil puppy have some note the hint that given is in this image there is a important
+note.
+so after getting the hint I was able to extract the Information from this image.
+I use the strings linux tool to decode the image
+<code>
+```
+strings dog.jpg
+JFIF
+http://ns.adobe.com/xap/1.0/
+<?xpacket begin='
+' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='Image::ExifTool 12.16'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+<rdf:Description rdf:about=''
+xmlns:pdf='http://ns.adobe.com/pdf/1.3/'>
+<pdf:Author>AbhedyaCTF{b!scu!t_4_th3_re5cu3}</pdf:Author>
+</rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+<?xpacket end='w'?>
+```
+</code>
+In the above code a flag is hidden.
+<img src="8.jpg">
+<b>Flag:
+AbhedyaCTF{b!scu!t_4_th3_re5cu3}</b>
+</pre>
 </body>
 </html>
