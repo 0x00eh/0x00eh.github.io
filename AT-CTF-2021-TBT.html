@@ -1,0 +1,32 @@
+<html>
+<body> 
+<title> TheBlackthreat</title>
+
+Inspect_me: http://164.52.211.11:9001/
+Enumeration: Ths this challenge as the name says that inspect me. and is something
+about inspect
+
+
+In this challenge May be there is XSS vulnerability but here I I injects some scripts
+but it won’t woks for the flags.
+<IMG SRC=# onmouseover="alert('Flag')">
+but it didn’t work so I look around to the source file and I found something intersting.
+the function for button tag where we can inject our script.
+Page source http://164.52.211.11:9001/javas.js
+```
+var secretCode = "X01lZWVffQ==";
+document.getElementsByTagName('button').onclick=function() {
+click();
+}
+function click() {
+document.getElementById("he").innerHTML = "You Can't find me...";
+}
+```
+<img src=main/uploads/2.
+So the secretCode is X01lZWVffQ==
+It will looks like base64 so i decode it I got the flag
+seems that the name is the flag.
+Result Flag:
+AbhedyaCTF{_Meee_}}
+</body>
+</html>
