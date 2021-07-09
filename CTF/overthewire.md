@@ -1,6 +1,6 @@
 
 Create by Theblackthreat
-<br />
+<br/>
 CTF-Bandit
 
 <!---
@@ -22,8 +22,8 @@ bandit14: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 bandit15: BfMYroe26WYalil77FoDi9qh59eK5xNr
 bandit16: cluFn7wTiGryunymYOu4RcffSxQluehd
 --->
-<br />
-![](9.png)
+
+<img align="center" src="9.png">
 ```
 --------------------------
 
