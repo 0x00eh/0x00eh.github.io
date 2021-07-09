@@ -1,7 +1,7 @@
 
 Create by Theblackthreat
 CTF-Bandit
-
+<!---
 bandit0 : bandit0
 bandit1 : boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 bandit2 : CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
@@ -19,9 +19,11 @@ bandit13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 bandit14: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 bandit15: BfMYroe26WYalil77FoDi9qh59eK5xNr
 bandit16: cluFn7wTiGryunymYOu4RcffSxQluehd
-
+--->
+![](9.png)
+```
 --------------------------
-<code>
+
 ┌──(theblackthreat㉿theblackthreat)-[~]
 └─$ ssh -p 2220 bandit0@bandit.labs.overthewire.org
 This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
@@ -1308,4 +1310,4 @@ Correct!
 cluFn7wTiGryunymYOu4RcffSxQluehd
 
 bandit15@bandit:~$ 
-</code>
+```
