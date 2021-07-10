@@ -21,6 +21,11 @@ bandit13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 bandit14: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 bandit15: BfMYroe26WYalil77FoDi9qh59eK5xNr
 bandit16: cluFn7wTiGryunymYOu4RcffSxQluehd
+bandit17: use private key in 16.
+bandit18: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+bandit19: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+bandit20: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
 --->
 
 <img align="center" src="9.png">
