@@ -9,11 +9,10 @@ Inspect_me: http://164.52.211.11:9001/
 Enumeration: Ths this challenge as the name says that inspect me. and is something
 about inspect
 ![](1.jpg)
- < br />
+<br/>
 In this challenge May be there is XSS vulnerability but here I I injects some scripts
 but it won’t woks for the flags.
-  </br>
-  <code>
+<br/>
 <SRC=# onmouseover="alert('theblackthreat welcome you.')">
  
 but it didn’t work so I look around to the source file and I found something intersting.
@@ -21,8 +20,7 @@ the function for button tag where we can inject our script.
 
 Page source http://164.52.211.11:9001/javas.js
 
-  
-<code>
+```
 var secretCode = "X01lZWVffQ==";
  </br>
 document.getElementsByTagName('button').onclick=function() { </br>
@@ -30,30 +28,25 @@ click(); </br>
 }  </br>
 function click() { </br>
 document.getElementById("he").innerHTML = "You Can't find me..."; </br>
-} </br>
-</code>
-</br>
-<img src="2.jpg">
-     </br>
-So the secretCode is <code>X01lZWVffQ==</code>
-</br>
+} 
+```
+![2.jpg]
+    <br/>
+So the secretCode is ```X01lZWVffQ==```
+<br/>
 It will looks like base64 so i decode it I got the flag
-</br>
+<br/>
 seems that the name is the flag.
-</br>
-<b>Result Flag: </b>
-</br>
+<br/>
+Result Flag:
+<br/>
 <u>AbhedyaCTF{_Meee_}}</u>
-</br>
-</br>
-
-</br>
+<br/>
 *****************************************************************************************************************
-</br>
-</br>
-</pre>
-<h3>Reverse: </h3>
-<u>1. Challenge </u>
+<br/>
+Reverse: 
+<br/>
+1. Challenge 
 </br>
 https://drive.google.com/file/d/**********************8/view?usp=sharing
 
