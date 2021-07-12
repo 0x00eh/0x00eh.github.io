@@ -6,7 +6,8 @@ echo "Welcome!"
 
 
 Inspect_me: http://164.52.211.11:9001/
-Enumeration: Ths this challenge as the name says that inspect me. and is something
+<br/>
+**Enumeration:** Ths this challenge as the name says that inspect me. and is something
 about inspect
 ![](1.jpg)
 <br/>
@@ -30,7 +31,7 @@ function click() { </br>
 document.getElementById("he").innerHTML = "You Can't find me..."; </br>
 } 
 ```
-![2.jpg]
+![](2.jpg)
     <br/>
 So the secretCode is ```X01lZWVffQ==```
 <br/>
@@ -55,7 +56,7 @@ know but overall thing is that we need to grep the flag by anyway.
 <br/>
 Step 1: First I open the file on Ghidra to know how it works.
 
-![3.jpg]
+![](3.jpg)
 
 
 
@@ -101,7 +102,7 @@ So i find another way to find the flag the misconfiguration of the code helped m
 lot.
 The linux tool stings is so usefull to extract the infromation
 
-![4.jpg]
+![](4.jpg)
 
 
 ```
@@ -174,7 +175,7 @@ $python3 Rev\ -2-find_n.py
 {z3n_0f_pyth0n}
 ```
 
-![5.jpg]
+![](5.jpg)
 <br/>
 
 Result : Flag:
@@ -185,6 +186,7 @@ AbhedyaCTF{z3n_0f_pyth0n}
 
 Forensics:
 1. Harry Potter
+<br/>
 https://drive.google.com/file/d/**************************/view?usp=sharing
 Methodology : In this challenge the music has have some encoded massage and I have
 to find it so I use the stings tool on linux and I found some information about that
@@ -214,7 +216,7 @@ Bitrate: 192kb/s CBR
   <br/>
 I need to decrypt the audio file so a little bit google search helped me to do this
 I found Steganographic Decoder
-<img src="6.jpg">
+![](6.jpg)
 https://futureboy.us/stegano/decinput.html
 Result: Flag: AbhedyaCTF{Stegnography_is_tricky!}
 
@@ -225,7 +227,7 @@ Result: Flag: AbhedyaCTF{Stegnography_is_tricky!}
 2. Don’t think for a second this is some cute Lil puppy. He took off with some
 important note, can
 you catch him to retrieve the important note?
-![7.jpg]
+![](7.jpg)
 This lil puppy have some note the hint that given is in this image there is a important
 note.
 so after getting the hint I was able to extract the Information from this image.
@@ -249,6 +251,6 @@ xmlns:pdf='http://ns.adobe.com/pdf/1.3/'>
 ```
 
 In the above code a flag is hidden.
-<img src="8.jpg">
+![](8.jpg)
 <b>Flag:
 AbhedyaCTF{b!scu!t_4_th3_re5cu3}</b>
