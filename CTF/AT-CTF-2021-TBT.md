@@ -1,7 +1,4 @@
-<html>
-<body> 
-<title> TheBlackThreat</title>
-  <pre>
+
   RED="\033[1;31m"
 GREEN="\033[1;32m"
 echo "Welcome!"
@@ -12,8 +9,7 @@ echo "Welcome!"
  "     ##     ##    #      ##     "
  "     ##     #######      ##     "
  "-------------------------------------"
-</pre>
-  <pre>
+```
 <h3>Inspect_me: http://164.52.211.11:9001/</h3>
 <b>Enumeration:</b><p> Ths this challenge as the name says that inspect me. and is something
 about inspect</p>
@@ -57,7 +53,6 @@ seems that the name is the flag.
 </br>
 </br>
 
-*****************************************************************************************************************
 </br>
 *****************************************************************************************************************
 </br>
@@ -112,9 +107,7 @@ return 0;
 }
 ```
 </code>
-</pre>
 
-<pre>
 The logic is that first the key value should be equal to local_10 and the Input is contain by Local_14 here we can see that (local_10 == local_14) so the key value is
 0x2687 in binary and in decimal it will be 2687. but the proper configuration may
 not work here and I don’t had much time do.
@@ -150,17 +143,13 @@ cool
 </code>
 here is the
 Flag: AbhedyaCTF{reversing_is_cool}
-</pre>
-<pre>
+
 </br>
 </br>
 *****************************************************************************************************************
 </br>
-*****************************************************************************************************************
 </br>
-</br>
-</pre>
-<pre>
+
 2. Decrypt Language:
 https://drive.google.com/file/d/******************************/view?usp=sharing
 
@@ -253,8 +242,7 @@ https://futureboy.us/stegano/decinput.html
 *****************************************************************************************************************
 </br>
 </br>
-</pre>
-<pre>
+
 2. Don’t think for a second this is some cute Lil puppy. He took off with some
 important note, can
 you catch him to retrieve the important note?
@@ -264,7 +252,7 @@ This lil puppy have some note the hint that given is in this image there is a im
 note.
 so after getting the hint I was able to extract the Information from this image.
 I use the strings linux tool to decode the image
-<code>
+
 ```
 strings dog.jpg
 JFIF
@@ -281,11 +269,9 @@ xmlns:pdf='http://ns.adobe.com/pdf/1.3/'>
 </x:xmpmeta>
 <?xpacket end='w'?>
 ```
-</code>
+
 In the above code a flag is hidden.
 <img src="8.jpg">
 <b>Flag:
 AbhedyaCTF{b!scu!t_4_th3_re5cu3}</b>
-</pre>
-</body>
-</html>
+```
