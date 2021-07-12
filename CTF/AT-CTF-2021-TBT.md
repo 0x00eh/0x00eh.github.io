@@ -4,7 +4,7 @@ GREEN="\033[1;32m"
 echo "Welcome!"
  "++++++2021-CTF-Challenge-Abhedya+++++++"
 
-```
+
 Inspect_me: http://164.52.211.11:9001/
 Enumeration: Ths this challenge as the name says that inspect me. and is something
 about inspect
@@ -56,17 +56,17 @@ seems that the name is the flag.
 <u>1. Challenge </u>
 </br>
 https://drive.google.com/file/d/**********************8/view?usp=sharing
-</br>
+
 In this challenge First I gave the permission to the a.out file and execute it it will ask for key: whcih i don’t 
 know but overall thing is that we need to grep the flag by anyway.
-</br>
+<br/>
 Step 1: First I open the file on Ghidra to know how it works.
+
+![3.jpg]
 </br>
-<img style="height:700px; width:1300px" src="3.jpg">
-</br>
-<pre>
+
 Here i see that the code that is asking for:
-<code>
+
 ```
 undefined8 main(void)
 {
@@ -86,7 +86,6 @@ local_1c = 0x7d;
 local_10 = 0x2687;
 printf("enter the key: ");
 13}
-```
 __isoc99_scanf(&DAT_00102014,&local_14);
 if (local_10 == local_14) {
 for (local_c = 0; local_c < 0x1d; local_c = local_c + 1) {
@@ -100,7 +99,6 @@ printf("wrong key, try again");
 return 0;
 }
 ```
-</code>
 
 The logic is that first the key value should be equal to local_10 and the Input is contain by Local_14 here we can see that (local_10 == local_14) so the key value is
 0x2687 in binary and in decimal it will be 2687. but the proper configuration may
@@ -109,9 +107,9 @@ So i find another way to find the flag the misconfiguration of the code helped m
 lot.
 The linux tool stings is so usefull to extract the infromation
 </br>
-<img src="4.jpg">
+![4.jpg]
 
-<code>
+
 ```
 $ string ./a.out
 strings ./a.out
@@ -134,15 +132,13 @@ TF{reverH
 sing_is_H
 cool
 ```
-</code>
+
 here is the
 Flag: AbhedyaCTF{reversing_is_cool}
 
-</br>
-</br>
+<br/>
 *****************************************************************************************************************
-</br>
-</br>
+<br/>
 
 2. Decrypt Language:
 https://drive.google.com/file/d/******************************/view?usp=sharing
@@ -150,7 +146,7 @@ https://drive.google.com/file/d/******************************/view?usp=sharing
 In this chellenge I got a python script that supports the 3 version of pyhton so it is one kind of a algorithm that 
 can decode the number so string
 of order n ords= [73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
-<code>
+
 ```
 import sys
 if sys.version_info.major == 2:
@@ -159,11 +155,11 @@ Python 3.")
 ords = [73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
 print("".join(chr(o ^ 0xn) for o in ords))
 ```
-</code>
+
 I need to change the code because there is no order of n specified but the strings can
 major of n=32
 Modified code
-<code>
+
 ```
 import sys
 if sys.version_info.major == 2:
@@ -172,35 +168,34 @@ Python 3.")
 ords = [73, 72, 1, 92, 109, 2, 84, 109, 66, 75, 70, 90, 2, 92, 79]
 
 print("".join(chr(o ^ 0x32) for o in ords))
-</code>
 
-Again run the script using python3
-<code>
+
+#Again run the script using python3
+
+
+```
+<br/>
 ```
 $python3 Rev\ -2-find_n.py
 {z3n_0f_pyth0n}
 ```
-</code>
-<img src="5.jpg">
+
+![5.jpg]
+<br/>
 
 Result : Flag:
 AbhedyaCTF{z3n_0f_pyth0n}
-</br>
-</br>
-*****************************************************************************************************************
-</br>
-*****************************************************************************************************************
-</br>
-</br>
-</pre>
-<h3>Forensics:</h3>
-<pre>
+<br/>
+************************************************************************************************************
+<br/>
+
+Forensics:
 1. Harry Potter
 https://drive.google.com/file/d/**************************/view?usp=sharing
 Methodology : In this challenge the music has have some encoded massage and I have
 to find it so I use the stings tool on linux and I found some information about that
 image.
-<code>
+
 ```
 $ strings harry-potter-ringtone\ \(1\).wav
 RIFF
@@ -215,33 +210,28 @@ www.ringtonedownload.best
 IPRD
 www.ringtonedownload.best
 ISFT
-```
-</code>
 Basic details of the ringtone.
 File name: harry-potter-ringtone.mp3
 File type: audio/mpeg
 File size: 752 KB
 Length: 32 seconds
 Bitrate: 192kb/s CBR
+```
+  <br/>
 I need to decrypt the audio file so a little bit google search helped me to do this
 I found Steganographic Decoder
 <img src="6.jpg">
 https://futureboy.us/stegano/decinput.html
-<b>Result: Flag: AbhedyaCTF{Stegnography_is_tricky!}</b>
+Result: Flag: AbhedyaCTF{Stegnography_is_tricky!}
 
-</br>
-</br>
+<br/>
 *****************************************************************************************************************
-</br>
-*****************************************************************************************************************
-</br>
-</br>
+<br/>
 
 2. Don’t think for a second this is some cute Lil puppy. He took off with some
 important note, can
 you catch him to retrieve the important note?
-https://drive.google.com/file/d/******************************/view?usp=sharing
-<img src="7.jpg"/>
+![7.jpg]
 This lil puppy have some note the hint that given is in this image there is a important
 note.
 so after getting the hint I was able to extract the Information from this image.
@@ -268,4 +258,3 @@ In the above code a flag is hidden.
 <img src="8.jpg">
 <b>Flag:
 AbhedyaCTF{b!scu!t_4_th3_re5cu3}</b>
-```
