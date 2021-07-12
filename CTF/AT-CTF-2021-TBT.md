@@ -3,30 +3,24 @@
 GREEN="\033[1;32m"
 echo "Welcome!"
  "++++++2021-CTF-Challenge-Abhedya+++++++"
- "  ########  #######   ########  "
- "     ##     ##    #      ##     "
- "     ##     ## ###       ##     "
- "     ##     ##    #      ##     "
- "     ##     #######      ##     "
- "-------------------------------------"
+
 ```
-<h3>Inspect_me: http://164.52.211.11:9001/</h3>
-<b>Enumeration:</b><p> Ths this challenge as the name says that inspect me. and is something
-about inspect</p>
-<img src="1.jpg">
-  </br>
+Inspect_me: http://164.52.211.11:9001/
+Enumeration: Ths this challenge as the name says that inspect me. and is something
+about inspect
+![](1.jpg)
+ < br />
 In this challenge May be there is XSS vulnerability but here I I injects some scripts
 but it won’t woks for the flags.
   </br>
   <code>
 <SRC=# onmouseover="alert('theblackthreat welcome you.')">
-  </code>
-  </br>
+ 
 but it didn’t work so I look around to the source file and I found something intersting.
 the function for button tag where we can inject our script.
-  </br>
+
 Page source http://164.52.211.11:9001/javas.js
-  </br>
+
   
 <code>
 var secretCode = "X01lZWVffQ==";
