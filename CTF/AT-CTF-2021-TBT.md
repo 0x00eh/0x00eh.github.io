@@ -56,7 +56,8 @@ know but overall thing is that we need to grep the flag by anyway.
 Step 1: First I open the file on Ghidra to know how it works.
 
 ![3.jpg]
-</br>
+
+
 
 Here i see that the code that is asking for:
 
@@ -99,7 +100,7 @@ not work here and I don’t had much time do.
 So i find another way to find the flag the misconfiguration of the code helped me a
 lot.
 The linux tool stings is so usefull to extract the infromation
-</br>
+
 ![4.jpg]
 
 
