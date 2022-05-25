@@ -7,6 +7,7 @@
     <pre>          <a href="https://github.com/theblackthreat/AWS-console">AWS-Cloud(With Ease of learning)</a>...................# #Theblackthreat #aws #cloud #app</pre>
     <pre>          <a href="https://theblackthreat-vuldev.herokuapp.com/login.php">Hacking Practise </a>.....................#Theblackthreat #Vulnerable #Hacking #training</pre>
         <pre>          <a href="https://youtube.com/theblackthreat">Youtube Tutorials </a>.................................#Theblackthreat #Vulnerable #youtube </pre>
+            <pre>          <a href="https://forms.gle/B79iAkNvanwmxMWP9">We are Hiring for Ethical Hacking Video Creator's </a>.................................#Theblackthreat  </pre>
   </body>
 </html>
 
